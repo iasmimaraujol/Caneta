@@ -12,6 +12,7 @@ public class Caneta {
     //declaracoes
     public String modelo;
     public String cor;
+    public int x;
     private float ponta;
     protected int carga;
     protected boolean tampada;
@@ -22,6 +23,7 @@ public class Caneta {
         this.ponta = p;
         this.carga = 100;
         this.tampada = true;
+        this.x = 0;
     }
 
     //modificadores
@@ -41,24 +43,32 @@ public class Caneta {
     //metodos
     public void rabiscar(){
         if(this.tampada == true){
-            System.out.println("não dá para rabiscar!");
-        }else{
-            System.out.println("dá para riscar!");
+            destampar();
+           }else{
+           this.carga -= 10;
+           this.x += 1;
+           tampar();
         }
     }
     public void printOn(){
+        if(x == 0){
         System.out.println(this.tampada);
         System.out.println(this.carga);
         System.out.println(this.cor);
         System.out.println(this.modelo);
         System.out.println(this.ponta);
+        }else{
+            System.out.println(this.modelo + " da cor " + this.cor);
+            System.out.println("Atualmente contem uma carga de: " + this.carga + "%");
+        }
         System.out.println("-------------------------------");
     }
     private void tampar(){
         this.tampada = true;
     }
     private void destampar(){
-        this.tampada = false;        
+        this.tampada = false;
+        rabiscar();        
     } 
 
 }

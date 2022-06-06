@@ -1,4 +1,5 @@
-/* //! Autor: Iasmim Araujo
+/* 
+ * //! Autor: Iasmim Araujo
  * //! Data: 05/06/2022
  * //? in english
  * This project is only to review OOP
@@ -15,6 +16,12 @@ class teste{
         
         c1.printOn();
         c2.printOn();
+
+        c1.rabiscar();
+        c1.printOn();
+        
+        c1.rabiscar();
+        c1.printOn();
         
         }    
 }
