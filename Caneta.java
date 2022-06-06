@@ -9,12 +9,25 @@
  * A ideia é criar um programa que faça as atividades comuns de uma caneta
  */
 public class Caneta {
+    //declaracoes
     public String modelo;
     public String cor;
-    private double ponta;
+    private float ponta;
     protected int carga;
     protected boolean tampada;
+    //construtor
+    public void modCaneta(String modelo, String cor, float ponta){
+        this.modelo = modelo;
+        this.cor = cor;
+        this.ponta = ponta;
+        this.carga = 100;
+        this.tampada = true;
 
+    }
+
+    //modificadores
+
+    //metodos
     public void rabiscar(){
         if(this.tampada == true){
             System.out.println("não dá para rabiscar!");
@@ -30,11 +43,11 @@ public class Caneta {
         System.out.println(this.ponta);
         System.out.println("-------------------------------");
     }
-    void tampar(){
+    private void tampar(){
         this.tampada = true;
     }
-    void destampar(){
+    private void destampar(){
         this.tampada = false;        
     } 
-       
+
 }
