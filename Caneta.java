@@ -42,13 +42,18 @@ public class Caneta {
 
     //metodos
     public void rabiscar(){
-        if(this.tampada == true){
-            destampar();
-           }else{
-           this.carga -= 10;
-           this.x += 1;
-           tampar();
+        if(this.carga == 0){
+            printOn();
         }
+        else{
+            if(this.tampada == true){
+                destampar();
+                }else{
+                    this.carga -= 10;
+                    this.x += 1;
+                    tampar();
+                    }
+            }
     }
     public void printOn(){
         if(x == 0){

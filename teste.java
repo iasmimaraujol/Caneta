@@ -21,7 +21,14 @@ class teste{
         c1.printOn();
         
         c1.rabiscar();
+        c1.rabiscar();
+        c1.rabiscar();
+        c1.rabiscar();
+        c1.rabiscar();
+        c1.rabiscar();
+        c1.rabiscar();
+        c1.rabiscar();
+        c1.rabiscar();
         c1.printOn();
-        
         }    
 }
